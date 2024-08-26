@@ -49,7 +49,7 @@ function makeListItems(){
         } else if (number == 0){
             alert('Please input valid number between 1 to 10.');
             number = false;
-        } else if(number && (number < 1 && number > 10)){
+        } else if(number && (number < 1 || number > 10)){
             alert('Please input valid number between 1 to 10.');
             number = false;
         }
