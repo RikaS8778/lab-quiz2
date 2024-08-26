@@ -55,12 +55,29 @@ function makeListItems(){
         }
     }
     
-    const parentD = document.getElementById('parent')
+    const parentD = document.getElementById('parent');
+    parentD.innerHTML = '';
+    const h2 = document.createElement('h2');
+    h2.className = 'fw-bold mb-5';
+    h2.innerHTML = 'List Of' + '<span class="text-primary fw-medium">'+' Items'+'</span>';
+    parentD.appendChild(h2);
     let h_text = 'Item #';
     let p_text = 'This is item #'
+    
    
 
     for(i=1;i<=number;i++){
+        const itemP = document.createElement('div');
+        itemP.className = 'd-flex mb-4';
+        const imgD = document.createElement('div');
+        imgD.className = 'text-primary';
+        const img = document.createElement('img');
+        img.width = 40;
+        img.height = 20;
+        img.src = '../demo.files/svg/various/line-chart.svg';
+        img.alt = '...';
+        imgD.appendChild(img);
+        itemP.appendChild(imgD);
         const itemContainer = document.createElement('item-container');
         itemContainer.className = 'mx-2'
         const itemHeader = document.createElement('h3');
@@ -70,6 +87,8 @@ function makeListItems(){
         const itemParag = document.createElement('p');
         itemParag.textContent = p_text + i;
         itemContainer.appendChild(itemParag);
+        itemP.appendChild(itemContainer);
+        parentD.appendChild(itemP);
     }
     
 
