@@ -5,16 +5,16 @@ const date = new Date();
 let correntDate = date.getFullYear() + '/' + date.getMonth() + '/' + date.getDate();
 console.log(correntDate);
 document.getElementById('current-date').textContent = correntDate;
-// let yourMail = '';
-// while(!yourMail){
-//     yourMail = prompt('Type your email address');
-//     if(yourMail && !yourMail.includes('@')){
-//         alert('Please input valid your email address.');
-//         yourMail = '';
-//     } else {
-//         document.getElementById('your-email').textContent = yourMail;
-//     }
-// }
+let yourMail = '';
+while(!yourMail){
+    yourMail = prompt('Type your email address');
+    if(yourMail && !yourMail.includes('@')){
+        alert('Please input valid your email address.');
+        yourMail = '';
+    } else {
+        document.getElementById('your-email').textContent = yourMail;
+    }
+}
 
 let defLay7Value = ' port / Layer 7';
 document.getElementById('http').innerText = `80${defLay7Value}`;
