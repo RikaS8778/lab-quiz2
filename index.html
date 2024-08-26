@@ -33,7 +33,7 @@ Instructor: Washington Valencia
 	<!-- favicon -->
 	<link rel="shortcut icon" type="image/x-icon"
 		href="https://canvascctb.s3.ca-central-1.amazonaws.com/account_1/attachments/95/CCTB_favicon.ico" />
-
+	<script src="js/scripts.js" defer></script>
 
 </head>
 
@@ -149,7 +149,7 @@ Instructor: Washington Valencia
 
 									<a class="nav-link" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
 										aria-expanded="false" id="mainNavHosting">
-										<h3>Quiz #2 - IST 107 - <span class="text-danger">{{Replace with your Full
+										<h3>Quiz #2 - IST 107 - <span class="text-danger" id="full-name">{{Replace with your Full
 												Name}}</span>
 										</h3>
 									</a>
@@ -172,7 +172,7 @@ Instructor: Washington Valencia
 						<ul class="list-inline list-unstyled mb-0 d-flex align-items-end">
 
 							<li class="list-inline-item float-start">
-								<a href="#" class="btn btn-sm btn-primary btn-pill transition-hover-start m-0">
+								<a href="#" class="btn btn-sm btn-primary btn-pill transition-hover-start m-0" id="button-name" onclick="changeName()">
 
 									<i class="fi fi-users m-0-xs"></i>
 
@@ -221,8 +221,8 @@ Instructor: Washington Valencia
 							</p><br><br>
 
 							<div class="mt-15 text-muted">
-								<h2>{{Replace with current date}} </h2>
-								<h2>{{Replace with your email}} </h2>
+								<h2 id="current-date">{{Replace with current date}} </h2>
+								<h2 id="your-email">{{Replace with your email}} </h2>
 							</div>
 
 						</div>
@@ -259,7 +259,7 @@ Instructor: Washington Valencia
 					<h2 class="h5 mb-1">
 						<span class="text-primary fw-bold">HTTP</span> <span class="fw-light">protocol</span>
 					</h2>
-					<p class="m-0">xx port / Layer 7</p>
+					<p class="m-0" id="http">xx port / Layer 7</p>
 
 				</div>
 
@@ -269,7 +269,7 @@ Instructor: Washington Valencia
 					<h2 class="h5 mb-1">
 						<span class="text-danger fw-bold">HTTPS</span> <span class="fw-light">protocol</span>
 					</h2>
-					<p class="m-0">xx port / Layer 7</p>
+					<p class="m-0" id="https">xx port / Layer 7</p>
 
 				</div>
 
@@ -279,7 +279,7 @@ Instructor: Washington Valencia
 					<h2 class="h5 mb-1">
 						<span class="text-warning fw-bold">SSH</span> <span class="fw-light">protocol</span>
 					</h2>
-					<p class="m-0">xx port / layer 7</p>
+					<p class="m-0" id="ssh">xx port / layer 7</p>
 
 				</div>
 
@@ -289,7 +289,7 @@ Instructor: Washington Valencia
 					<h2 class="h5 mb-1">
 						<span class="text-success fw-bold">DNS</span> <span class="fw-light">protocol</span>
 					</h2>
-					<p class="m-0">xx port / layer 7</p>
+					<p class="m-0" id="dns">xx port / layer 7</p>
 
 				</div>
 
@@ -437,78 +437,38 @@ Instructor: Washington Valencia
 						</h2>
 
 
-						<div class="d-flex mb-4">
+						<div class="d-flex mb-4" id="parent">
 
 							<!-- icon -->
 							<div class="text-primary">
 								<img width="40" height="20" src="demo.files/svg/various/line-chart.svg" alt="...">
 							</div>
 
-							<div class="mx-2">
+							<!--
+							<div class="mx-2" id="item-container">-->
 
 								<!-- heading -->
-								<h3 class="h5 fw-bold mb-1">
-									Item #1
+								<!--
+								<h3 class="h5 fw-bold mb-1" >
+									
 								</h3>
-
+								-->
 								<!-- text -->
+								 <!--
 								<p>
-									This is item #1.
+									
 								</p>
+								-->
 
-							</div>
+							<!--</div>-->
+							
 
 						</div>
 
 
-						<div class="d-flex mb-4">
-
-							<!-- icon -->
-							<div class="text-primary">
-								<img width="40" height="20" src="demo.files/svg/various/line-chart.svg" alt="...">
-							</div>
-
-							<div class="mx-2">
-
-								<!-- heading -->
-								<h3 class="h5 fw-bold mb-1">
-									Item #2
-								</h3>
-
-								<!-- text -->
-								<p>
-									This is item #2.
-								</p>
-
-							</div>
-
-						</div>
-
-						<div class="d-flex mb-4">
-
-							<!-- icon -->
-							<div class="text-primary">
-								<img width="40" height="20" src="demo.files/svg/various/line-chart.svg" alt="...">
-							</div>
-
-							<div class="mx-2">
-
-								<!-- heading -->
-								<h3 class="h5 fw-bold mb-1">
-									Item #3
-								</h3>
-
-								<!-- text -->
-								<p>
-									This is item #3.
-								</p>
-
-							</div>
-
-						</div>
-
+						
 						<div class="text-align-end">
-							<a href="#" class="btn btn-primary btn-soft">How many items would you like in
+							<a href="#" class="btn btn-primary btn-soft" id="ask-number" onclick="makeListItems()">How many items would you like in
 								the list?</a>
 						</div>
 
